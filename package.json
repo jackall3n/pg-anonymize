@@ -23,7 +23,7 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.4.2",
     "chalk": "^4",
-    "faker": "^5.2.0",
+    "faker": "^6.0.0",
     "fs-extra": "^11.1.1",
     "pluralize": "^8.0.0"
   },
@@ -33,7 +33,7 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@types/chai": "^4",
-    "@types/faker": "^5.5.9",
+    "@types/faker": "^6.0.0",
     "@types/fs-extra": "^11.0.1",
     "@types/mocha": "^9.0.0",
     "@types/node": "^18.15.3",
