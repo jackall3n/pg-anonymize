@@ -803,21 +803,24 @@
     fast-levenshtein "^3.0.0"
     lodash "^4.17.21"
 
-"@oclif/plugin-plugins@^2.4.2":
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/@oclif/plugin-plugins/-/plugin-plugins-2.4.2.tgz#251bfa8d7f50b9fe65e3bf230ba5aa84b334bdea"
-  integrity sha512-9F3N6z8w4+mMYaLCKhE5y4KlwlIl/xaDWfpsqw4/RaC3YgMYQA28tp53ypeOeHPFE23J0iTy6eeXTK8dowcj2w==
+"@oclif/plugin-plugins@^3.0.0":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@oclif/plugin-plugins/-/plugin-plugins-3.1.2.tgz#524ac2d28f2a2df4895f71ea2c6c1b06c8e3e51e"
+  integrity sha512-gBfnPBnGR3bMqCgwwuDW+tUCxWhmDtpdiNTLCXfZz/h1Rmgk96XoEM0Tx/w1AfjgWrL8dzsS477qyLbr0M+htg==
   dependencies:
     "@oclif/color" "^1.0.4"
-    "@oclif/core" "^2.6.2"
+    "@oclif/core" "^2.8.5"
     chalk "^4.1.2"
     debug "^4.3.4"
     fs-extra "^9.0"
     http-call "^5.2.2"
     load-json-file "^5.3.0"
+    npm "^9.6.7"
     npm-run-path "^4.0.1"
-    semver "^7.3.8"
+    semver "^7.5.0"
+    shelljs "^0.8.5"
     tslib "^2.4.1"
+    validate-npm-package-name "^5.0.0"
     yarn "^1.22.18"
 
 "@oclif/plugin-warn-if-update-available@^2.0.14":
@@ -5556,7 +5559,7 @@ npm-user-validate@^2.0.0:
   resolved "https://registry.yarnpkg.com/npm-user-validate/-/npm-user-validate-2.0.0.tgz#7b69bbbff6f7992a1d9a8968d52fd6b6db5431b6"
   integrity sha512-sSWeqAYJ2dUPStJB+AEj0DyLRltr/f6YNcvCA7phkB8/RMLMnVsQ41GMwHo/ERZLYNDsyB2wPm7pZo1mqPOl7Q==
 
-npm@^9.5.0:
+npm@^9.5.0, npm@^9.6.7:
   version "9.7.1"
   resolved "https://registry.yarnpkg.com/npm/-/npm-9.7.1.tgz#38819bf78a1847ad1bf7321ac593186da31f823e"
   integrity sha512-kxMviaiLX4Lfnjy2dt7EWB87v5QdLiGpy04S2ORdKLmPqFhgy8g4cgJjQfnWob4mJIaNHjBO+hk45CvLlsZZ8g==
@@ -6708,7 +6711,7 @@ semver@^7.0.0, semver@^7.1.1, semver@^7.1.2, semver@^7.1.3, semver@^7.2.1, semve
   dependencies:
     lru-cache "^6.0.0"
 
-semver@^7.3.7, semver@^7.5.1:
+semver@^7.3.7, semver@^7.5.0, semver@^7.5.1:
   version "7.5.2"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.2.tgz#5b851e66d1be07c1cdaf37dfc856f543325a2beb"
   integrity sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ==
