@@ -1,7 +1,7 @@
 {
   "name": "pg-anonymize",
   "description": "Export your postgreSQL database anonymized",
-  "version": "1.2.0",
+  "version": "0.0.0-development",
   "author": "Raphaël Huchet @rap2hpoutre",
   "bin": {
     "pg-anonymize": "./bin/run"
@@ -46,7 +46,7 @@
     "mocha": "^9",
     "oclif": "^3",
     "prisma": "^4.11.0",
-    "semantic-release": "^19.0.2",
+    "semantic-release": "^21.0.5",
     "shx": "^0.3.3",
     "ts-node": "^10.9.1",
     "tslib": "^2.5.0",
@@ -78,7 +78,8 @@
     "version": "oclif readme && git add README.md",
     "db:migrate": "prisma migrate deploy",
     "db:seed": "prisma db seed",
-    "db:setup": "yarn db:migrate && yarn db:seed"
+    "db:setup": "yarn db:migrate && yarn db:seed",
+    "semantic-release": "semantic-release"
   },
   "engines": {
     "node": ">=12.0.0"
