@@ -19,7 +19,7 @@ export function runPgDump(argv: string []): ChildProcessWithoutNullStreams {
   return pg;
 }
 
-// These arguments, if passed through to pg_dump, will break pg-anonymizer.
+// These arguments, if passed through to pg_dump, will break pg-anonymize.
 export const pgDumpArgsBlacklist = [
   "-f",
   "--file",

@@ -1,18 +1,18 @@
-pg-anonymizer
+pg-anonymize
 =============
 
 Export your PostgreSQL database anonymized. Replace all sensitive data thanks to `faker`. Output to a file that you can easily import with `psql`.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/pg-anonymizer.svg)](https://npmjs.org/package/pg-anonymizer)
-[![Downloads](https://img.shields.io/npm/dt/pg-anonymizer.svg)](https://npmjs.org/package/pg-anonymizer)
-[![License](https://img.shields.io/npm/l/pg-anonymizer.svg)](https://github.com/rap2hpoutre/pg-anonymizer/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/pg-anonymize.svg)](https://npmjs.org/package/pg-anonymize)
+[![Downloads](https://img.shields.io/npm/dt/pg-anonymize.svg)](https://npmjs.org/package/pg-anonymize)
+[![License](https://img.shields.io/npm/l/pg-anonymize.svg)](https://github.com/rap2hpoutre/pg-anonymize/blob/master/package.json)
 ## Usage
 
 Run this command by giving a connexion string and an output file name (no need to install first thanks to `npx`):
 
 ```bash
-npx pg-anonymizer postgres://user:secret@localhost:1234/mydb -o dump.sql
+npx pg-anonymize postgres://user:secret@localhost:1234/mydb -o dump.sql
 ```
 
 ☝️ This command requires `pg_dump`. It may already be installed as soon as PostgreSQL is installed.
@@ -20,7 +20,7 @@ npx pg-anonymizer postgres://user:secret@localhost:1234/mydb -o dump.sql
 Output can also be stdout ('-') so you can pipe the output to zip, gz, or to psql:
 
 ```bash
-npx pg-anonymizer postgres://user:secret@localhost:1234/mydb -o - | psql DATABASE_URL
+npx pg-anonymize postgres://user:secret@localhost:1234/mydb -o - | psql DATABASE_URL
 ```
 
 ## API
@@ -32,7 +32,7 @@ npx pg-anonymizer postgres://user:secret@localhost:1234/mydb -o - | psql DATABAS
 Use `--columns` option with a comma separated list of column name:
 
 ```bash
-npx pg-anonymizer postgres://localhost/mydb \
+npx pg-anonymize postgres://localhost/mydb \
   --columns=email,firstName,lastName,phone
 ```
 
@@ -53,7 +53,7 @@ public.user.email,public.product.description,email,name
 You can also choose which faker function you want to use to replace data (default is `faker.random.word`):
 
 ```bash
-npx pg-anonymizer postgres://localhost/mydb \
+npx pg-anonymize postgres://localhost/mydb \
   --columns=firstName:faker.name.firstName,lastName:faker.name.lastName
 ```
 
@@ -61,7 +61,7 @@ npx pg-anonymizer postgres://localhost/mydb \
 
 You can use plain text too for static replacements:
 ```bash
-npx pg-anonymizer postgres://localhost/mydb \
+npx pg-anonymize postgres://localhost/mydb \
   --columns=textcol:hello,jsoncol:{},intcol:12
 ```
 
@@ -85,7 +85,7 @@ module.exports = {
 
 Pass the path to `--extension` and use the module exports in `--columns`
 ```bash
-npx pg-anonymizer postgres://localhost/mydb \
+npx pg-anonymize postgres://localhost/mydb \
   --extension ./myExtension.js \
   --columns=email:extension.maskEmail
 ```
@@ -105,7 +105,7 @@ password:faker.random.word
 
 Pass the path to the file into `--config`
 ```bash
-npx pg-anonymizer postgres://localhost/mydb \
+npx pg-anonymize postgres://localhost/mydb \
   --config /path/to/file
 ```
 
@@ -116,7 +116,7 @@ npx pg-anonymizer postgres://localhost/mydb \
 Use `--skip` to skip anonymizing entire tables
 
 ```bash
-npx pg-anonymizer postgres://localhost/mydb --skip public.posts
+npx pg-anonymize postgres://localhost/mydb --skip public.posts
 ```
 
 ### `--preserve-null | -n`
@@ -126,7 +126,7 @@ npx pg-anonymizer postgres://localhost/mydb --skip public.posts
 Use `--preserve-null` to skip anonymization on fields with `NULL` values.
 
 ```bash
-npx pg-anonymizer postgres://localhost/mydb --preserve-null
+npx pg-anonymize postgres://localhost/mydb --preserve-null
 ```
 
 ### `--faker-locale`

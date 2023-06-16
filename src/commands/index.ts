@@ -20,7 +20,7 @@ function dieAndLog(message: string, error: any) {
 
 const logger = new Logger();
 
-export default class PgAnonymizer extends Command {
+export default class PgAnonymize extends Command {
   static description = "dump anonymized database"
 
   static strict = false
@@ -95,7 +95,7 @@ export default class PgAnonymizer extends Command {
   }
 
   async run(): Promise<void> {
-    const { argv, flags, args, metadata, raw } = await this.parse(PgAnonymizer);
+    const { argv, flags, args, metadata, raw } = await this.parse(PgAnonymize);
 
     if (flags.silent) {
       process.env.LOGGING_LEVEL = "none";
@@ -184,4 +184,4 @@ export type ParseFlags<F> = {
     F[P] extends OptionFlag<infer T> ? T : never;
 };
 
-export type FlagOutput = ParseFlags<typeof PgAnonymizer.flags>
+export type FlagOutput = ParseFlags<typeof PgAnonymize.flags>
